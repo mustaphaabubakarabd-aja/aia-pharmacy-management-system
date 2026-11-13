@@ -1,0 +1,18 @@
+AIA PHARMACY UI UPDATE — 09 October 2026
+
+Changes made:
+- Rebuilt assets/style.css with a complete shared green theme and consistent variables.
+- Added common styling for top header, sidebar, page layout, forms, buttons, tables, cards, alerts, badges, login, and responsive mobile views.
+- Added active navigation styling to the sidebar links in includes/header.php.
+- Added a CSS version query so browsers request the updated stylesheet rather than a cached copy.
+
+No database schema or pharmacy transaction logic was intentionally changed.
+
+Installation:
+1. Make a backup copy of your existing C:\xampp\htdocs\aia_pharmacy folder.
+2. Extract this ZIP.
+3. Copy the included aia_pharmacy folder over the existing folder, allowing the updated files to replace the old ones.
+4. Keep your existing database aia_pharmacy unchanged.
+5. Open http://localhost/aia_pharmacy/ and refresh with Ctrl+F5.
+
+PHP syntax validation was run on all PHP files included in the package and no syntax errors were reported.

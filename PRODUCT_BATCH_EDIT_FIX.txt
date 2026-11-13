@@ -1,0 +1,14 @@
+AIA PHARMACY - Product/Batch Edit and Packaging Conversion Fix
+
+This update improves the Edit Medicine page:
+- The Products list passes the selected batch ID into the edit form.
+- Edit Medicine loads the selected batch's conversion and batch-level prices.
+- The quantity field for an existing batch shows that batch's own stock, not the medicine-wide total, and remains read-only.
+- Saving the form updates the selected batch's conversion/pricing metadata without changing its stock quantity.
+- Stock quantities must still be changed through Purchases / Stock In.
+- Packaging conversion can be left blank if unknown; Pack/Carton transactions should be blocked until their required conversion is confirmed.
+
+Before replacing files, back up the project folder and export the aia_pharmacy database.
+Replace the project files from this ZIP in C:\xampp\htdocs\aia_pharmacy.
+If the batch-level pricing columns have not yet been added, run database/migrations/2026_batch_pricing.sql ONCE in phpMyAdmin against aia_pharmacy. Do not run it again if those five price columns already exist.
+The pieces_per_pack and packs_per_carton columns already existed in the user's database according to the provided screenshot; do not add them again.
